@@ -23,3 +23,5 @@ Array.prototype.take = function(count) {
   if (this.length <= count) return this.shuffle();
   return get_uniq_random_indices(count, this.length).map(i => this[i]);
 }
+
+export default Array;

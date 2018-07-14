@@ -1,3 +1,8 @@
+import Game from './game';
+import Selector from './selector'
+import { store_radios } from './radio';
+import devicons from './devicon';
+
 document.addEventListener('DOMContentLoaded', function() {
   store_radios(sessionStorage);
 
@@ -9,14 +14,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
   let game = new Game(icons, card_field_node, card_template_node, card_shirt_selector.value, card_count_selector.value);
 })
-
-class Selector {
-  constructor(selector_string, type_constructor = String) {
-    this.selector_string = selector_string;
-    this.type_constructor = type_constructor;
-  }
-
-  get value() {
-    return this.type_constructor(document.querySelector(this.selector_string).value);
-  }
-}

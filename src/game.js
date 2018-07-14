@@ -1,3 +1,8 @@
+import CardField from './card_field';
+import Card from './card';
+import Array from './array_extend';
+import { CARD_ROTATE_DURATION, OPEN_CARD_DURATION } from './values';
+
 class Game {
   constructor(icons, card_field_node, card_template_node, card_shirt, card_count) {
     this.icons = icons.take(Math.floor(card_count / 2));
@@ -35,3 +40,5 @@ class Game {
     this.open_cards.clear();
   }
 }
+
+export default Game;

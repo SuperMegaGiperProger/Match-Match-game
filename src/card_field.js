@@ -9,3 +9,5 @@ class CardField {
     this.node.appendChild(card.node);
   }
 }
+
+export default CardField;

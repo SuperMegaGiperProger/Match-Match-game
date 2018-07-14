@@ -1,3 +1,5 @@
+import { CARD_ROTATE_DURATION, OPEN_CARD_DURATION, HIDDEN_CLASS, HIDE_CARD_DELAY } from './values';
+
 class Card {
   constructor(template_node, icon, shirt) {
     this.node = Card._create_node(template_node, shirt);
@@ -58,3 +60,5 @@ class Card {
     this.node.remove();
   }
 }
+
+export default Card;

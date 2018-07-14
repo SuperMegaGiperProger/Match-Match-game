@@ -26,3 +26,5 @@ function set_storage_radios_checked(storage) {
 function set_radio_checked(name, value) {
   document.querySelector(`input[name='${name}'][value='${value}']`).checked = true;
 }
+
+export { store_radios };

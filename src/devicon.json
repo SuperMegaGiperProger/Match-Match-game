@@ -1,4 +1,4 @@
-var devicons = [
+[
   {
     "name": "amazonwebservices",
     "tags": ["cloud", "hosting", "server"],
