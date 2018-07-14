@@ -10,7 +10,7 @@ body {
   padding: 20px;
   margin: auto;
   background-color: black;
-  color: #00EF26FF;
+  color: #00EF26;
   font-family: Courier New;
   max-width: 910px;
   min-width: 224px;
@@ -24,19 +24,30 @@ header {
   position: relative;
 }
 
-.info {
+.action_buttons_container {
   position: absolute;
   top: -8px;
   right: 0;
   height: 40px;
+  display: flex;
+  flex-direction: row;
+}
+
+.action_buttons_container .separator {
+  width: 10px;
+}
+
+.action_button {
+  position: relative;
+  height: 40px;
   width: 40px;
   border-radius: 7px;
-  border: solid 1px #00EF26FF;
+  border: solid 1px #00EF26;
   text-align: center;
   vertical-align: middle;
 }
 
-.info .info_data {
+.action_button .info_data {
   position: absolute;
   right: -1px;
   top: -1px;
@@ -51,26 +62,34 @@ header {
   z-index: 100;
 }
 
-.info:hover .info_data {
+.action_button:hover .info_data {
   display: inline-block;
 }
 
-.info .info_label {
+.action_button .label {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  margin: auto;
+}
+
+.action_button .label.info {
   width: 50%;
   height: 30%;
-  margin: auto;
+}
+
+.action_button .label.redo {
+  background-size: 20px 20px;
+  background-position: center;
 }
 
 article {
   display: flex;
   flex-wrap: wrap;
   border-radius: 20px;
-  border: solid 1px #00EF26FF;
+  border: solid 1px #00EF26;
   padding: 10px;
   margin-bottom: 30px;
 }
@@ -103,15 +122,15 @@ article {
 .setting input[type=radio] + label {
   display: inline-block;
   font-size: xx-large;
-  border: dotted 1px #00AF1BFF;
+  border: dotted 1px #00AF1B;
   border-radius: 10px;
   padding: 10px;
-  color: #00AF1BFF;
+  color: #00AF1B;
 }
 
 .setting input[type=radio]:checked + label {
-  border: solid 1px #00EF26FF;
-  color: #00EF26FF;
+  border: solid 1px #00EF26;
+  color: #00EF26;
 }
 
 .card.blank {
@@ -140,4 +159,8 @@ article {
 
 .setting input[type=radio]:checked + label.card.cube {
  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAS0lEQVQoU2NkIAa8V/vPSFDde7X/DIK3GPErhCoCGYZbIZIi3ArRFGFXCFIEAoK3UGxDtRrZJJxWY7GOAcMz2BTBwg0ePPgUISkGALz0KDNnBX2eAAAAAElFTkSuQmCC);
+}
+
+.redo {
+  background: url(icons/redo-solid.svg) no-repeat;
 }

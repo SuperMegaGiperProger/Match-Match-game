@@ -6,6 +6,8 @@ import devicons from './devicon';
 document.addEventListener('DOMContentLoaded', function() {
   store_radios(sessionStorage);
 
+  document.getElementById('reload_button').onclick = () => window.location.reload();
+
   const icons = devicons.map(devicon => `devicon-${devicon.name}-${devicon.versions.font[0]}`);
   const card_template_node = document.getElementById('template_card');
   const card_shirt_selector = new Selector('input[name=shirt]:checked');
