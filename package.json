@@ -1,0 +1,29 @@
+{
+  "name": "match-match_game",
+  "version": "1.0.0",
+  "description": "Match Match is a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards.",
+  "main": "javascripts/match_match.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuperMegaGiperProger/Match-Match-game.git"
+  },
+  "keywords": [
+    "game",
+    "match",
+    "match-match",
+    "js",
+    "cards"
+  ],
+  "author": "Pavel Pershko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SuperMegaGiperProger/Match-Match-game/issues"
+  },
+  "homepage": "https://github.com/SuperMegaGiperProger/Match-Match-game#readme"
+}
