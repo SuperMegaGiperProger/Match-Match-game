@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Match Match</title>
+  <link rel="icon" href="./../static/icon.png">
+  <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Match Match</h1>
+    <div class="action_buttons_container">
+      <div id="reload_button" class="action_button">
+        <span class="label redo"></span>
+      </div>
+      <div class="separator"></div>
+      <div class="action_button">
+        <span class="info label">i</span>
+        <span class="info_data">
+          <a href="https://en.wikipedia.org/wiki/Concentration_(game)">Match Match</a> is a card game
+          in which all of the cards are laid face down on a surface and two cards are flipped face up
+          over each turn. The object of the game is to turn over pairs of matching cards.
+        </span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <article id="card_field">
+      <span id="template_card" class="display-none card"></span>
+    </article>
+    <article>
+      <div class="setting">
+        <h2>Complexity</h2>
+        <input id="12_complexity" type="radio" name="complexity" value="12" checked>
+        <label for="12_complexity">12</label>
+        <input id="24_complexity" type="radio" name="complexity" value="24">
+        <label for="24_complexity">24</label>
+        <input id="48_complexity" type="radio" name="complexity" value="48">
+        <label for="48_complexity">48</label>
+      </div>
+      <div class="setting">
+        <h2>Card shirt</h2>
+        <input id="blank_shirt" type="radio" name="shirt" value="blank" checked>
+        <label for="blank_shirt" class="card blank"></label>
+        <input id="cube_shirt" type="radio" name="shirt" value="cube">
+        <label for="cube_shirt" class="card cube"></label>
+        <input id="checked_shirt" type="radio" name="shirt" value="checked">
+        <label for="checked_shirt" class="card checked"></label>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,168 @@
+@import '~devicon-2.2/devicon.min.css';
+
+.display-none {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+body {
+  padding: 20px;
+  margin: auto;
+  background-color: black;
+  color: #00EF26;
+  font-family: Courier New;
+  max-width: 910px;
+  min-width: 224px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+header {
+  position: relative;
+}
+
+.action_buttons_container {
+  position: absolute;
+  top: -8px;
+  right: 0;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+}
+
+.action_buttons_container .separator {
+  width: 10px;
+}
+
+.action_button {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  border-radius: 7px;
+  border: solid 1px #00EF26;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.action_button .info_data {
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  width: 90vw;
+  max-width: 300px;
+  background-color: black;
+  border: inherit;
+  border-radius: 10px;
+  padding: 10px;
+  line-height: 1.2;
+  display: none;
+  z-index: 100;
+}
+
+.action_button:hover .info_data {
+  display: inline-block;
+}
+
+.action_button .label {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.action_button .label.info {
+  width: 50%;
+  height: 30%;
+}
+
+.action_button .label.redo {
+  background-size: 20px 20px;
+  background-position: center;
+}
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  border: solid 1px #00EF26;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.card {
+  height: 100px;
+  width: 100px;
+  background-color: inherit;
+  background-repeat: repeat;
+  border: inherit;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 8px;
+  font-size: 100px;
+  transition: 0.5s;
+}
+
+.setting {
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.setting input[type=radio] {
+  display: none;
+}
+
+.setting input[type=radio] + label {
+  display: inline-block;
+  font-size: xx-large;
+  border: dotted 1px #00AF1B;
+  border-radius: 10px;
+  padding: 10px;
+  color: #00AF1B;
+}
+
+.setting input[type=radio]:checked + label {
+  border: solid 1px #00EF26;
+  color: #00EF26;
+}
+
+.card.blank {
+  background-image: none;
+}
+
+.card.cube {
+ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAS0lEQVQoU2NkIAa8V/vPSFDde7X/DIK3GPErhCoCGYZbIZIi3ArRFGFXCFIEAoK3UGxDtRrZJJxWY7GOAcMz2BTBwg0ePPgUISkGALz0KDNnBX2eAAAAAElFTkSuQmCC);
+}
+
+.card.checked {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAJElEQVQoU2NkQAfv1f4zCN5iRBZG4YAlaKwIZDwBQHc3ERFOAPVmGh6rtAyrAAAAAElFTkSuQmCC);
+}
+
+.setting input[type=radio] + label.card.checked {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAANklEQVQoU2NkQAfrpf8zBD5lRBZG4WBogApgKiLKJKyKYIIgGh2A3LZe+j81rcPlJSRxoqwDALHkGdO3YDTSAAAAAElFTkSuQmCC);
+}
+
+.setting input[type=radio]:checked + label.card.checked {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAJElEQVQoU2NkQAfv1f4zCN5iRBZG4YAlaKwIZDwBQHc3ERFOAPVmGh6rtAyrAAAAAElFTkSuQmCC);
+}
+
+.setting input[type=radio] + label.card.cube {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAATUlEQVQoU2NkIAasl/7PSFDdeun/DIFPGQkrhJqEWyHUJJiN2BWiKQIpxlQIUgQCgU9R5FAVIptElNVYggJiIhY3wdXCgwefIphqoBoAbysenU16lnkAAAAASUVORK5CYII=);
+}
+
+.setting input[type=radio]:checked + label.card.cube {
+ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAS0lEQVQoU2NkIAa8V/vPSFDde7X/DIK3GPErhCoCGYZbIZIi3ArRFGFXCFIEAoK3UGxDtRrZJJxWY7GOAcMz2BTBwg0ePPgUISkGALz0KDNnBX2eAAAAAElFTkSuQmCC);
+}
+
+.redo {
+  background: url(./icons/redo-solid.svg) no-repeat;
+}
