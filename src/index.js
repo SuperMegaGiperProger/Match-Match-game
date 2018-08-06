@@ -2,7 +2,9 @@ import Game from './game';
 import Selector from './selector'
 import { store_radios } from './radio';
 import devicons from 'devicon-2.2/devicon.json';
-import './index.css';
+
+import './assets/stylesheets/index.css';
+import './assets/images/favicon.png';
 
 document.addEventListener('DOMContentLoaded', function() {
   store_radios(sessionStorage);
