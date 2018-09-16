@@ -4,40 +4,40 @@ import Array from './array_extend';
 import { CARD_ROTATE_DURATION, OPEN_CARD_DURATION } from './values';
 
 class Game {
-  constructor(icons, card_field_node, card_template_node, card_shirt, card_count) {
-    this.icons = icons.take(Math.floor(card_count / 2));
-    this.card_template_node = card_template_node;
-    this.card_shirt = card_shirt;
-    this.field = new CardField(card_field_node);
-    this.generate_cards();
-    this.open_cards = new Set();
+  constructor(icons, cardFieldNode, cardTemplateNode, cardShirt, cardCount) {
+    this.icons = icons.take(Math.floor(cardCount / 2));
+    this.cardTemplateNode = cardTemplateNode;
+    this.cardShirt = cardShirt;
+    this.field = new CardField(cardFieldNode);
+    this.generateCards();
+    this.openCards = new Set();
   }
 
-  generate_cards() {
+  generateCards() {
     this.icons.concat(this.icons).shuffle().forEach((icon) => {
-      let new_card = new Card(this.card_template_node, icon, this.card_shirt);
-      new_card.node.onclick = () => this.open_card(new_card);
-      this.field.append(new_card);
-    })
+      let newCard = new Card(this.cardTemplateNode, icon, this.cardShirt);
+      newCard.node.onclick = () => this.openCard(newCard);
+      this.field.append(newCard);
+    });
   }
 
-  open_card(card) {
-    if (this.open_cards.size >= 2) return;
-    this.open_cards.add(card);
+  openCard(card) {
+    if (this.openCards.size >= 2) return;
+    this.openCards.add(card);
     card.open();
-    if (this.open_cards.size == 2 && this.card_sameness) this.hide_cards();
-    else setTimeout(() => this.open_cards.delete(card), CARD_ROTATE_DURATION * 2 + OPEN_CARD_DURATION);
+    if (this.openCards.size == 2 && this.cardSameness) this.hideCards();
+    else setTimeout(() => this.openCards.delete(card), CARD_ROTATE_DURATION * 2 + OPEN_CARD_DURATION);
   }
 
-  get card_sameness() {
+  get cardSameness() {
     let card_a, card_b;
-    [card_a, card_b] = Array.from(this.open_cards);
+    [card_a, card_b] = Array.from(this.openCards);
     return card_a.icon == card_b.icon;
   }
 
-  hide_cards() {
-    this.open_cards.forEach(card => card.hide());
-    this.open_cards.clear();
+  hideCards() {
+    this.openCards.forEach(card => card.hide());
+    this.openCards.clear();
   }
 }
 

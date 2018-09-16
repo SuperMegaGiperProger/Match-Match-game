@@ -1,51 +1,51 @@
 import { CARD_ROTATE_DURATION, OPEN_CARD_DURATION, HIDDEN_CLASS, HIDE_CARD_DELAY } from './values';
 
 class Card {
-  constructor(template_node, icon, shirt) {
-    this.node = Card._create_node(template_node, shirt);
+  constructor(templateNode, icon, shirt) {
+    this.node = Card._createNode(templateNode, shirt);
     this.icon = icon;
     this.shirt = shirt;
   }
 
-  static _create_node(template_node, shirt) {
-    let node = template_node.cloneNode();
+  static _createNode(templateNode, shirt) {
+    let node = templateNode.cloneNode();
     node.classList.add(shirt);
     node.classList.remove('display-none');
     return node;
   }
 
   open() {
-    this.rotate(() => this.replace_class(this.shirt, this.icon));
+    this.rotate(() => this.replaceClass(this.shirt, this.icon));
     setTimeout(() => this.close(), OPEN_CARD_DURATION);
   }
 
   close() {
-    this.rotate(() => this.replace_class(this.icon, this.shirt));
+    this.rotate(() => this.replaceClass(this.icon, this.shirt));
   }
 
   hide() {
     setTimeout(() => this.class_on(HIDDEN_CLASS), HIDE_CARD_DELAY);
   }
 
-  replace_class(curr_class, replace_class) {
-      this.class_off(curr_class);
-      this.class_on(replace_class);
+  replaceClass(currClass, replaceClass) {
+      this.class_off(currClass);
+      this.class_on(replaceClass);
   }
 
-  rotate(between_action) {
+  rotate(betweenAction) {
     this.constrict();
     setTimeout(() => {
-      between_action();
+      betweenAction();
       this.expand();
     }, CARD_ROTATE_DURATION);
   }
 
-  class_on(node_class) {
-    this.node.classList.add(node_class);
+  class_on(nodeClass) {
+    this.node.classList.add(nodeClass);
   }
 
-  class_off(node_class) {
-    this.node.classList.remove(node_class);
+  class_off(nodeClass) {
+    this.node.classList.remove(nodeClass);
   }
 
   constrict() {
